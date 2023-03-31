@@ -48,8 +48,8 @@ def histograms():
 
 def plotMSE(trainingDataset, testingDataset, alphas, iterations=1000):
 
-    trainingSampleVectors, trainingRightAnswers     =   makeSampleVectors(trainingDataset)
-    testingSampleVectors , testingRightAnswers      =   makeSampleVectors(testingDataset)
+    trainingSampleVectors, trainingRightAnswers     =   makeVectorPairs(trainingDataset)
+    testingSampleVectors , testingRightAnswers      =   makeVectorPairs(testingDataset)
 
      # We need to add an awkward 1 to x_k as described on page 15:
     trainingSampleVectors   =   np.array( [ np.append( sample, [1] ) for sample in trainingSampleVectors ] )
